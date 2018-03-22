@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.79in]{geometry}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{0.5cm}{0pt}
+\title{CSC356 Project Proposal\vspace{-2ex}}
+\author{Joe Tortorello}
+\date{\vspace{-2ex}23 March 2018\vspace{-2ex}}
+%-----------------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\section{Introduction}
+The project I wish to propose is an augmented-reality mapping and navigation application
+for the Microsoft HoloLens. The application would allow the user to specify a destination
+in the physical world, and the HoloLens will display navigation instructions on the ground
+in their respective physical locations. The project will take advantage of the HoloLens's
+ability to differentiate between rooms, store room models persistently, and match stored
+room models with the present room. The HoloLens's room modeling functionality will also be
+used for the purpose of attaching user interface elements to the ground in front of the
+user.
+\section{Scale and Limitations}
+Several issues I would anticipate this project to experience relate to the use of the
+HoloLens outdoors. The size of room that the HoloLens can map is limited, and this limit
+would certainly be exceeded in an outdoor environment. Additionally, the HoloLens does
+not have a GPS sensor, so location data would have to be determined using a less accurate
+location service that relies on distance of known Wi-Fi networks. Finally, the visual
+performance of the HoloLens is poor in bright light, so on a sunny day the user interface
+would not be very visible.
+
+Due to these limitations, I am proposing a smaller scale project, where all navigation
+will take place within the confines of Law Hall. The need for geolocation will be
+eliminated by using room model matching to identify where the user is within the
+building. This means that areas the user might enter would need to be pre-mapped by the
+HoloLens, but this is doable on the scale of a single building. Instructions for moving
+from one room to another could be stored within the HoloLens at this scale, but could also
+be offloaded to an external server since the HoloLens will have a reasonably stable
+network connection when operating only within the building.
+
+\section{Future Applications}
+There are several future applications that add relevance to this project. At the scale of
+a single building, the application could be used within retail stores, to help customers
+find what they are looking for within the store. A similar approach could be used in
+buildings such as shopping malls, to help users find a particular retailer within the
+mall, or to find other facilities such as restrooms. In facilities with a parking garage,
+the location of the user's vehicle could potentially be stored to make it easier to find
+later.
+
+On a larger scale, an application like this one could, of course, be used for navigation
+in vehicles. In vehicles, it might make more sense for the user interface to be
+implemented by a windshield projection rather than a head-mounted display, but the concept
+would remain the same. This technology could have initial applications for public safety,
+allowing routes for public safety vehicles to be determined based upon traffic data by a
+computer, and presented to the driver in a clear way, potentially improving the speed at
+which these vehicles could get to a certain location. Of course, applications could also
+extend to the consumer space, providing driving directions much like a smartphone
+navigation application today, but presenting them with clear visual cues that do not
+require the driver to look down or to the side to see. Finally, more advanced navigational
+information, such as coordinate grids and other positioning data may be useful to ship or
+aircraft operators. For aircraft specifically, the application could allow runways to be
+seen during descent before the aircraft drops below clouds, or through fog of any density.
+
+\end{document}
